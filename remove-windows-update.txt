@@ -22,7 +22,6 @@ STRING $cmdString = 'wusa /quiet /norestart /uninstall /kb:' + $input
 ENTER
 STRING Invoke-Expression -Command $cmdString
 ENTER
-
 STRING Remove-Item $MyINvocation.InvocationName 
 ENTER
 CTRL s
